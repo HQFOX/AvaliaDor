@@ -20,6 +20,14 @@ import {
 import Home from './Screens/Home.js';
 import Screen1 from './Screens/Screen1';
 import End from './Screens/End';
+import PainIntensity from './Screens/PainIntensity.js';
+import Autonomy from './Screens/Autonomy.js';
+import Surgical from './Screens/Surgical.js';
+import Bandages from './Screens/Bandages.js';
+import Procedures from './Screens/Procedures.js';
+import Pathology from './Screens/Pathology.js';
+import Oncology from './Screens/Oncology.js';
+import CronicPain from './Screens/CronicPain.js';
 
 const Stack = createStackNavigator();
 
@@ -29,16 +37,40 @@ const App: () => React$Node = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen 
-            name="Home"
-            component={Home}
+              name="Intensidade da Dor"
+              component={PainIntensity}
             />
             <Stack.Screen
-            name="Screen1"
-            component={Screen1}
+              name="Autonomia"
+              component={Autonomy}
             />
             <Stack.Screen
-            name="End"
-            component={End}
+              name="Episódio cirúrgico"
+              component={Surgical}
+            />
+            <Stack.Screen
+              name="Pensos"
+              component={Bandages}
+            />
+            <Stack.Screen
+              name="Procedimentos"
+              component={Procedures}
+            />
+            <Stack.Screen
+              name="Patologias"
+              component={Pathology}
+            />
+            <Stack.Screen
+              name="Oncologia"
+              component={Oncology}
+            />
+            <Stack.Screen
+              name="Dor Crónica"
+              component={CronicPain}
+            />
+            <Stack.Screen
+              name="End"
+              component={End}
             />
 
         </Stack.Navigator>

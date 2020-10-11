@@ -11,23 +11,17 @@ import {
     StatusBar,
     Button,
   } from 'react-native';
-import Screen1 from './Screen1';
+import Autonomy from "./Autonomy"
 
 import Slider from '@react-native-community/slider';
   
 
-export default Home = ({navigation}) => {
+export default PainIntensity = ({navigation}) => {
 
     const [ pain, setPain ] = useState(0)
     return (
         <View>
-            <Text> Home </Text>
-            <Button
-                title="Próximo"
-                onPress={() => 
-                    navigation.navigate("Screen1")}
-                    />
-            <Text >Intensidade da dor {pain} </Text>
+            <Text >Valor da Intensidade da Dor {pain} </Text>
             <Slider
                 style={{width: 200, height: 40}}
                 minimumValue={0}
@@ -37,7 +31,12 @@ export default Home = ({navigation}) => {
                 onValueChange={pain => setPain(pain)}
                 minimumTrackTintColor="#FFFFFF"
                 maximumTrackTintColor="#000000"
-  />
+            />
+            <Button
+                title="Próximo"
+                onPress={() => 
+                navigation.navigate("Autonomia")}
+            />
         </View>
     )
 }

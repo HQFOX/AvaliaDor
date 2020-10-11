@@ -16,6 +16,7 @@ export default Screen1 = () => {
     return (
         <View>
             <Text> Home </Text>
+
         </View>
     )
 }
